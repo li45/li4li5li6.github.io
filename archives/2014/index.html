@@ -63,15 +63,25 @@
     <div class="entry">
       
         <h2 id="-">安装步骤</h2>
-<pre><code>yum -y install pcre-devel openssl openssl-devel
-cd /usr/local/src
-wget http://nginx.org/download/nginx-0.7.68.tar.gz
-tar -zxvf nginx-0.7.68.tar.gz
-cd nginx-0.7.68
-./configure --with-http_stub_status_module
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>yum <span class="attribute">-y</span> install pcre<span class="attribute">-devel</span> openssl openssl<span class="attribute">-devel</span>
+cd /usr/<span class="built_in">local</span>/src
+wget http:<span class="comment">//nginx.org/download/nginx-0.7.68.tar.gz</span>
+tar <span class="attribute">-zxvf</span> nginx<span class="subst">-</span><span class="number">0.7</span><span class="number">.68</span><span class="built_in">.</span>tar<span class="built_in">.</span>gz
+cd nginx<span class="subst">-</span><span class="number">0.7</span><span class="number">.68</span>
+<span class="built_in">.</span>/configure <span class="subst">--</span><span class="keyword">with</span><span class="attribute">-http_stub_status_module</span>
 make
 make install
-</code></pre><h2 id="nginx_http_stub_status_module-">nginx_http_stub_status_module插件</h2>
+</pre></td></tr></table></figure>
+
+<h2 id="nginx_http_stub_status_module-">nginx_http_stub_status_module插件</h2>
 <p>这个模块能够获取Nginx自上次启动以来的工作状态。 此模块非核心模块，需要在编译的时候手动添加编译参数 <code>--with-http_stub_status_module</code>， 安装完成后需配置<code>/usr/local/nginx/conf/nginx.conf</code>使插件生效    </p>
 
       
